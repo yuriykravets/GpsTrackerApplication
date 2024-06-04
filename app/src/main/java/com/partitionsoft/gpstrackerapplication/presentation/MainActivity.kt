@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
         ) {
             return
         }
-        val locationRequest = LocationRequest.Builder(20000).apply {
+        val locationRequest = LocationRequest.Builder(LOCATION_UPDATE_INTERVAL).apply {
             setPriority(Priority.PRIORITY_HIGH_ACCURACY)
         }.build()
         LocationServices.getFusedLocationProviderClient(this)
@@ -111,5 +111,6 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         const val LOCATION_PERMISSION_REQUEST_CODE = 1000
+        const val LOCATION_UPDATE_INTERVAL = 300000L
     }
 }

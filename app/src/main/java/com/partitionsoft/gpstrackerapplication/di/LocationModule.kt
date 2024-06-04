@@ -8,12 +8,14 @@ import com.partitionsoft.gpstrackerapplication.presentation.LocationViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 
+private const val UPDATE_INTERVAL_MILLIS = 300000L
+
 val locationModule = module {
     single { LocationServices.getFusedLocationProviderClient(androidContext()) }
 
     single {
-        LocationRequest.Builder(Priority.PRIORITY_HIGH_ACCURACY, 20000).apply {
-            setMinUpdateIntervalMillis(20000)
+        LocationRequest.Builder(Priority.PRIORITY_HIGH_ACCURACY, UPDATE_INTERVAL_MILLIS).apply {
+            setMinUpdateIntervalMillis(UPDATE_INTERVAL_MILLIS)
         }.build()
     }
 
