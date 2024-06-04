@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">GpsTrackerApplication</string>
+    <string name="location_info">Інформація \n про розташування</string>
+    <string name="location_tracker_warning">Надайте дозвіл для \n визначення розташування!</string>
+    <string name="try_again">Спробувати знову</string>
+</resources>
