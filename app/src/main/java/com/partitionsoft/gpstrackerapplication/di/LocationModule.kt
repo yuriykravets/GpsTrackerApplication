@@ -12,8 +12,8 @@ val locationModule = module {
     single { LocationServices.getFusedLocationProviderClient(androidContext()) }
 
     single {
-        LocationRequest.Builder(Priority.PRIORITY_HIGH_ACCURACY, 20000).apply {
-            setMinUpdateIntervalMillis(20000)
+        LocationRequest.Builder(Priority.PRIORITY_HIGH_ACCURACY, 300000).apply {
+            setMinUpdateIntervalMillis(300000)
         }.build()
     }
 
